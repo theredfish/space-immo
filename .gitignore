@@ -38,7 +38,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-# Scenes and their meta files
-Scenes*
-
 Logs
