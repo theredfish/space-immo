@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: eau01_idle01
+  m_Name: eau01_idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: b2d8d9d1b7332054c87666e34dd8679f, type: 3}
-    - time: 0.1
+    - time: 0.13333334
       value: {fileID: 21300000, guid: 76a39b168e197744ca49a74e2a3aca1f, type: 3}
-    - time: 0.2
+    - time: 0.26666668
       value: {fileID: 21300000, guid: 337b89f2f50145341ae8200c103a906d, type: 3}
-    - time: 0.3
+    - time: 0.38333333
       value: {fileID: 21300000, guid: 25e7c56d25af9b24aa11cc99df099af0, type: 3}
-    - time: 0.4
+    - time: 0.51666665
       value: {fileID: 21300000, guid: fb051f22ef5216d4b8cd4f81920fd356, type: 3}
     attribute: m_Sprite
     path: 
@@ -58,7 +58,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.4166667
+    m_StopTime: 0.5333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
