@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MenuOptionsPanel
+  - MenuMainPanel
+  - MenuTitle
+  - MenuBackground
+  - MenuButtons
+  - Mountain
+  - Water
+  - Tree
+  - Planet
   layers:
   - Default
   - TransparentFX
