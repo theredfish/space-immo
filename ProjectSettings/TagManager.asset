@@ -4,44 +4,48 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MenuButtons
+  - MenuOptionsPanel
+  - MenuMainPanel
   - MenuTitle
   - MenuBackground
-  - MenuMainPanel
-  - MenuOptionsPanel
+  - MenuButtons
+  - Mountain
+  - Water
+  - Tree
+  - Planet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  -
   - Water
   - UI
-  - 
-  - 
+  -
+  -
   - Ground
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
   m_SortingLayers:
   - name: Default
     uniqueID: 0
