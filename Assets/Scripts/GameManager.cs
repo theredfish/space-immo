@@ -9,10 +9,16 @@ public class GameManager : BaseManager
     float timeLeft = 80f;
     Text labelTimeLeft;
     GameSceneManager gameSceneManager;
+    SoundManager soundManager;
+    GameObject eventSystemManager;
+    GameObject mainCamera;
 
     void Start()
     {
         gameSceneManager = GameObject.FindGameObjectWithTag("GameSceneManager").GetComponent<GameSceneManager>();
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        eventSystemManager = GameObject.FindGameObjectWithTag("EventSystemManager");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update()
@@ -51,16 +57,17 @@ public class GameManager : BaseManager
 
     public void GameOver()
     {
-        Debug.Log("GameOver!");
-        isCrafting = false;
-        timeLeft = 80f;
+        Debug.Log("game scene manager : " + gameSceneManager.gameObject);
+        Destroy(gameSceneManager.gameObject);
+        Destroy(soundManager.gameObject);
+        Destroy(eventSystemManager);
+        Destroy(mainCamera);
         gameSceneManager.LoadMainMenu();
+        Destroy(this.gameObject);
     }
 
     public void QuitGame()
     {
         Application.Quit();
     }
-
-
 }

@@ -20,11 +20,15 @@ public class DialogueSystem : MonoBehaviour
     SoundManager soundManager;
     GameSceneManager gameSceneManager;
 
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Awake()
     {
         soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
         gameSceneManager = GameObject.FindGameObjectWithTag("GameSceneManager").GetComponent<GameSceneManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+
 
         DisableChoices();
         _inkStory = new Story(inkAsset.text);
@@ -77,7 +81,7 @@ public class DialogueSystem : MonoBehaviour
         //soundManager.PlayAgentImmoReaction();
         _inkStory.ChooseChoiceIndex(idx);
         DisableChoices();
-        
+
         StartDialogue();
     }
 
@@ -104,9 +108,8 @@ public class DialogueSystem : MonoBehaviour
 
         _inkStory.BindExternalFunction("gameOver", () =>
         {
-            gameSceneManager.LoadMainMenu();
-            Debug.Log("back to Menu");
-
+            Debug.Log("Game Over!");
+            gameManager.GameOver();
         });
     }
 }

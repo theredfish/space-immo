@@ -666,6 +666,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8672156285504699875, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
     - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
         type: 3}
       propertyPath: agentImmoReaction
@@ -676,11 +681,6 @@ PrefabInstance:
       propertyPath: audioSourceAgentImmo
       value: 
       objectReference: {fileID: 8672156285552897852}
-    - target: {fileID: 8672156285504699875, guid: 4b6e8287fab289d4a9bc989d67adeea1,
-        type: 3}
-      propertyPath: m_Name
-      value: SoundManager
-      objectReference: {fileID: 0}
     - target: {fileID: 8672156285504699873, guid: 4b6e8287fab289d4a9bc989d67adeea1,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -20,6 +20,7 @@ TagManager:
   - TimeLeft
   - Flower
   - Herb
+  - EventSystemManager
   layers:
   - Default
   - TransparentFX
