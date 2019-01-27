@@ -78,7 +78,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void MakeChoice(int idx)
     {
-        //soundManager.PlayAgentImmoReaction();
+        soundManager.PlayAgentImmoReaction();
         _inkStory.ChooseChoiceIndex(idx);
         DisableChoices();
 

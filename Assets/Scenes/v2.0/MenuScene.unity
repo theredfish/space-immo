@@ -673,14 +673,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
         type: 3}
+      propertyPath: VoxAgentImmo.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
       propertyPath: agentImmoReaction
       value: 
-      objectReference: {fileID: 8300000, guid: ce56e955bebabda43b18ab51f6960312, type: 3}
+      objectReference: {fileID: 8300000, guid: a7546a1224a4cd74898e2321ebd96b48, type: 3}
     - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
         type: 3}
       propertyPath: audioSourceAgentImmo
       value: 
       objectReference: {fileID: 8672156285552897852}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: VoxAgentImmo.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 05fb9fe1ac6973941808e58a1a3d72d3, type: 3}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: VoxAgentImmo.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: a7546a1224a4cd74898e2321ebd96b48, type: 3}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: VoxAgentImmo.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cbeb9e91d15b42a4c94228c6e1691096, type: 3}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: VoxAgentImmo.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: a3a6030648e7756429dc22a594df0f81, type: 3}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: VoxAgentImmo.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: fb6f182fcac49404f9dd526f5e09d378, type: 3}
+    - target: {fileID: 8672156285504699872, guid: 4b6e8287fab289d4a9bc989d67adeea1,
+        type: 3}
+      propertyPath: VoxAgentImmo.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ec8a970d79411840af7235e68aec080, type: 3}
     - target: {fileID: 8672156285504699873, guid: 4b6e8287fab289d4a9bc989d67adeea1,
         type: 3}
       propertyPath: m_LocalPosition.x

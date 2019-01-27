@@ -7,6 +7,8 @@ public class SoundManager : BaseManager
     public AudioClip mainTheme;
     public AudioClip planetCraftTheme;
     public AudioClip[] voxAlien1;
+
+    public AudioClip[] VoxAgentImmo;
     public AudioClip agentImmoReaction;
 
     public AudioSource mainAudioSource;
@@ -65,7 +67,11 @@ public class SoundManager : BaseManager
     }
 
     public void PlayAgentImmoReaction() {
-        audioSourceAgentImmo.clip = agentImmoReaction;
+        /*audioSourceAgentImmo.clip = agentImmoReaction;
+        audioSourceAgentImmo.Play();*/
+        int idx = Random.Range(0, VoxAgentImmo.Length);
+
+        audioSourceAgentImmo.clip = VoxAgentImmo[idx];
         audioSourceAgentImmo.Play();
     }
 }
