@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/v2.0/MenuScene.unity
+    guid: 5d3107a08f18939479b0e1e87f2b4ba2
+  - enabled: 1
+    path: Assets/Scenes/v2.0/DialogueLevel1.unity
+    guid: d873f7937948e8147a2de78eede55cae
+  - enabled: 1
+    path: Assets/Scenes/v2.0/PlanetCraftLevel1.unity
+    guid: 84db7a3849059e446b8d21b8c69710a0
+  - enabled: 1
+    path: Assets/Scenes/v2.0/GameOver.unity
+    guid: 44cdb31c442b28f4d96d4b6cd218c5dc
   m_configObjects: {}
