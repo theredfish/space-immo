@@ -1,3 +1,7 @@
+EXTERNAL loadQuestLevel1()
+EXTERNAL playVoiceAlien1()
+EXTERNAL gameOver()
+
 * [Oh, in the name of Neptune...] 
 **[What a hangover... My head is ringing. I hope I'll have some clients today.]
 ***[I'm so sick of dealing with local stellar architecture students...]
@@ -16,6 +20,7 @@
 My dog can make you some room in his kennel, it is so cozy in there if you ignore the human bones here and there! -->mauvaiserponse1
 
 ==reponse1==
+{playVoiceAlien1()}
 Gutorbz : I’m looking for a planet I can settle in with my 6 billion larvae. -->question1
 //attendu : elle est grande
 
@@ -26,6 +31,7 @@ Gutorbz : I’m looking for a planet I can settle in with my 6 billion larvae. -
 
     
 ** [Understood. What type of planet are you looking for ?]
+{playVoiceAlien1()}
  Gutorbz : Very humid, with a lot of trees and flowers, it's so romantic, reminds me of my human colonization... Oh, and as dark as possible. Oh, and of course, not hotter than 30 degrees. My larvae need to be nice and cozy !
      //attendu : marais x1, fleurs x2 ou 3, arbres x2
      
@@ -34,8 +40,7 @@ Gutorbz : I’d rather not exceed 5000 stellar credits per solaryear.
 
 ****[Alright, let’s see what we have here…]
 
-***** [In the Nortern Boundary neighborhood, for 5000 credits]
-******[I can propose a small meteore and its satellite. Both rocky, a bit of gas. Very cold...]
+***** [In the Nortern Boundary neighborhood, for 5000 credits.]
     Gutorbz : Is it dark ?
     
 ****** [Yes, it is an ancient meteorite, been cast away from Mars 2 500 ultrasolar years ago.]
@@ -43,6 +48,7 @@ Gutorbz : I’d rather not exceed 5000 stellar credits per solaryear.
     Gutorbz :and the view ? 
 
 ********[Unobstructed view on the Northern Boundary of the Milky Way.]
+    {playVoiceAlien1()}
     Gutorbz : So there is a bit of gas? Has to be removed. My larvae won’t stand this. Water, yes, gas, no.
     //attendu : eau x1 
 
@@ -53,11 +59,12 @@ Gutorbz : I’d rather not exceed 5000 stellar credits per solaryear.
 *********** [4500 credits + 1500 credits of de-gassing fees, for the larvae.]
     Gutorbz :So, the rent is 6000 credits…
     
-***********[Yes, it is a bit over your price limit but the view is amazing, very dark, almost no opposite planets. Shall I prepare it for you?]
+************ [Yes, it is a bit over your price limit but the view is amazing, very dark.]
+*************[Almost no opposite planets. Shall I prepare it for you?]
     Gutorbz : OK, let’s go for it. 
-  
-    
-************ You won’t be sorry!
+
+************** You won’t be sorry!
+{loadQuestLevel1()}
 -->quest
 
 
@@ -80,4 +87,5 @@ Hey! Come back, sucker friend!!
 -->end
 
 ==end==
+{gameOver()}
 -->DONE

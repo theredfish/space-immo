@@ -1,12 +1,17 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomerPlanetNeed : MonoBehaviour
+public class PlanetMeta : MonoBehaviour
 {
-    public int water = 0;
-    public int tree = 0;
-    public int mountains = 0;
+    public int waterFirstType = 0;
+    public int waterSecondType = 0;
+    public int trees = 0;
+
+    public int mountainsFirstType = 0;
+
+    public int mountainsSecondType = 0;
+
     Renderer m_Renderer;
     public Color color = Color.black;
 

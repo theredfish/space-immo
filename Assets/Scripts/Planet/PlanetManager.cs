@@ -27,9 +27,16 @@ public class PlanetManager : MonoBehaviour
         trees = transform.Find("Trees");
     }
 
-    public void addElementsToThePlanet(string tag) {
+    void Update()
+    {
+        transform.Rotate(0, 0, 15 * Time.deltaTime);
+    }
+
+    public void addElementsToThePlanet(string tag)
+    {
         refreshIsCompleted();
-        switch (tag) {
+        switch (tag)
+        {
             case MOUNTAIN:
                 addRandomTypeElement(mountains);
                 break;
@@ -46,10 +53,13 @@ public class PlanetManager : MonoBehaviour
         }
     }
 
-    void addRandomTypeElement (Transform elementType){
-        if (!isAllChildrenOfAnElementTypeActive(elementType)) { 
+    void addRandomTypeElement(Transform elementType)
+    {
+        if (!isAllChildrenOfAnElementTypeActive(elementType))
+        {
             int randomChildIndex = Random.Range(0, elementType.childCount - 1);
-            while (elementType.GetChild(randomChildIndex).gameObject.activeSelf ) {
+            while (elementType.GetChild(randomChildIndex).gameObject.activeSelf)
+            {
                 randomChildIndex = Random.Range(0, elementType.childCount - 1);
             }
             elementType.GetChild(randomChildIndex).gameObject.SetActive(true);
@@ -57,22 +67,27 @@ public class PlanetManager : MonoBehaviour
         }
     }
 
-    bool isAllChildrenOfAnElementTypeActive(Transform elementType) {
+    bool isAllChildrenOfAnElementTypeActive(Transform elementType)
+    {
 
-        for (int i = 0; i < elementType.childCount; i++) {
-            if (elementType.GetChild(i).gameObject.activeSelf == false) {
+        for (int i = 0; i < elementType.childCount; i++)
+        {
+            if (elementType.GetChild(i).gameObject.activeSelf == false)
+            {
                 return false;
             }
         }
         return true;
     }
 
-    void refreshIsCompleted() {
+    void refreshIsCompleted()
+    {
         isMountainsCompleted = isAllChildrenOfAnElementTypeActive(mountains);
         isWatersCompleted = isAllChildrenOfAnElementTypeActive(waters);
         isTreesCompleted = isAllChildrenOfAnElementTypeActive(trees);
-       
-        if (isMountainsCompleted == true && isWatersCompleted == true && isTreesCompleted == true) {
+
+        if (isMountainsCompleted == true && isWatersCompleted == true && isTreesCompleted == true)
+        {
             isCompleted = true;
             Debug.Log("PLANET COMPLETED !!!!");
         }

@@ -16,24 +16,26 @@ public class DialogueSystem : MonoBehaviour
     public TextAsset inkAsset;
     public Text narrativeText;
     public GameObject choices;
+    // public GameManager gameManager;
+    SoundManager soundManager;
+    GameSceneManager gameSceneManager;
 
     // Start is called before the first frame update
     void Awake()
     {
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        gameSceneManager = GameObject.FindGameObjectWithTag("GameSceneManager").GetComponent<GameSceneManager>();
+
         DisableChoices();
         _inkStory = new Story(inkAsset.text);
         sentences = new Queue<string>();
+
+        BindFunctions();
     }
 
     void Start()
     {
         StartDialogue();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     void StartDialogue()
@@ -80,5 +82,28 @@ public class DialogueSystem : MonoBehaviour
     void SaveStoryState()
     {
         savedStoryState = _inkStory.state.ToJson();
+    }
+
+    void BindFunctions()
+    {
+        _inkStory.BindExternalFunction("loadQuestLevel1", () =>
+        {
+            Debug.Log("load quest");
+            gameSceneManager.LoadQuestLevel1();
+            soundManager.PlayPlanetCraft();
+
+        });
+
+        _inkStory.BindExternalFunction("playVoiceAlien1", () =>
+        {
+            soundManager.PlayVoiceAlien1();
+
+        });
+
+        _inkStory.BindExternalFunction("gameOver", () =>
+        {
+            // gameManager.LoadQuestLevel1();
+
+        });
     }
 }
