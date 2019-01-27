@@ -23,7 +23,6 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     #region IDragHandler implementation
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("On drag");
         transform.position = Input.mousePosition;
     }
     #endregion

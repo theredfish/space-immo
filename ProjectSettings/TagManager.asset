@@ -18,6 +18,8 @@ TagManager:
   - GameManager
   - MenuManager
   - TimeLeft
+  - Flower
+  - Herb
   layers:
   - Default
   - TransparentFX

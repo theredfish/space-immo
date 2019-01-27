@@ -9,6 +9,8 @@ public class PlanetManager : MonoBehaviour
     const string MOUNTAIN = "Mountain";
     const string WATER = "Water";
     const string TREE = "Tree";
+    const string HERB = "Herb";
+    const string FLOWER = "Flower";
     //Parent Of the moutains
     Transform mountains;
     bool isMountainsCompleted;
@@ -18,6 +20,14 @@ public class PlanetManager : MonoBehaviour
     bool isWatersCompleted;
     Transform trees;
     bool isTreesCompleted;
+
+    Transform herbs;
+    bool isHerbsCompleted;
+
+    Transform flowers;
+    bool isFlowersCompleted;
+    //Parent Of the moutains
+    //Parent Of the moutains
 
     bool isCompleted;
 
@@ -33,6 +43,8 @@ public class PlanetManager : MonoBehaviour
         mountains = transform.Find("Mountains");
         waters = transform.Find("Waters");
         trees = transform.Find("Trees");
+        flowers = transform.Find("Flowers");
+        herbs = transform.Find("Herbs");
     }
 
     void Update()
@@ -54,6 +66,12 @@ public class PlanetManager : MonoBehaviour
             case TREE:
                 addRandomTypeElement(trees);
                 break;
+            case HERB:
+                addRandomTypeElement(herbs);
+                break;
+            case FLOWER:
+                addRandomTypeElement(flowers);
+                break;
             default:
                 Debug.Log("0 element ajouter");
                 break;
@@ -65,10 +83,11 @@ public class PlanetManager : MonoBehaviour
     {
         if (!isAllChildrenOfAnElementTypeActive(elementType))
         {
-            int randomChildIndex = Random.Range(0, elementType.childCount - 1);
+            int randomChildIndex = Random.Range(0, elementType.childCount);
             while (elementType.GetChild(randomChildIndex).gameObject.activeSelf)
             {
-                randomChildIndex = Random.Range(0, elementType.childCount - 1);
+                Debug.Log(randomChildIndex);
+                randomChildIndex = Random.Range(0, elementType.childCount);
             }
             elementType.GetChild(randomChildIndex).gameObject.SetActive(true);
             refreshIsCompleted();
@@ -77,7 +96,8 @@ public class PlanetManager : MonoBehaviour
 
     bool isAllChildrenOfAnElementTypeActive(Transform elementType)
     {
-
+        Debug.Log(elementType);
+        Debug.Log(elementType.childCount);
         for (int i = 0; i < elementType.childCount; i++)
         {
             if (elementType.GetChild(i).gameObject.activeSelf == false)
@@ -93,8 +113,11 @@ public class PlanetManager : MonoBehaviour
         isMountainsCompleted = isAllChildrenOfAnElementTypeActive(mountains);
         isWatersCompleted = isAllChildrenOfAnElementTypeActive(waters);
         isTreesCompleted = isAllChildrenOfAnElementTypeActive(trees);
+        isHerbsCompleted = isAllChildrenOfAnElementTypeActive(herbs);
+        isFlowersCompleted = isAllChildrenOfAnElementTypeActive(flowers);
 
-        if (isMountainsCompleted == true && isWatersCompleted == true && isTreesCompleted == true)
+        if (isMountainsCompleted == true && isWatersCompleted == true && isTreesCompleted == true 
+        && isHerbsCompleted == true && isFlowersCompleted == true)
         {
             isCompleted = true;
             Debug.Log("PLANET COMPLETED !!!!");
