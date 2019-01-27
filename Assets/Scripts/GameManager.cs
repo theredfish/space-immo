@@ -41,8 +41,10 @@ public class GameManager : BaseManager
         }
     }
 
-    public void Win()
+    public void Win(Text Label)
     {
+        isCrafting = false;
+        Label.text = "You Win";
         // TODO : when the player has
         // 60% of the craft valid. For example.
     }
@@ -52,7 +54,7 @@ public class GameManager : BaseManager
         Debug.Log("GameOver!");
         isCrafting = false;
         timeLeft = 80f;
-        gameSceneManager.SwitchToScene("GameOver");
+        gameSceneManager.LoadMainMenu();
     }
 
     public void QuitGame()

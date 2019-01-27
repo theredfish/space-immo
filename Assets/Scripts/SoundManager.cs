@@ -7,9 +7,12 @@ public class SoundManager : BaseManager
     public AudioClip mainTheme;
     public AudioClip planetCraftTheme;
     public AudioClip[] voxAlien1;
+    public AudioClip agentImmoReaction;
 
     public AudioSource mainAudioSource;
     public AudioSource audioSourceVoxAlien1;
+
+    public AudioSource audioSourceAgentImmo;
 
     void Update()
     {
@@ -30,11 +33,27 @@ public class SoundManager : BaseManager
         mainAudioSource.Play();
     }
 
+    public void PlayMainTheme() {
+        mainAudioSource.clip = mainTheme;
+        mainAudioSource.loop = true;
+        mainAudioSource.Play();
+    }
+
     public void PlayPlanetCraft()
     {
         mainAudioSource.clip = planetCraftTheme;
         mainAudioSource.loop = false;
         mainAudioSource.Play();
+    }
+
+    public void StopPlanetCraft()
+    {
+        mainAudioSource.Stop();
+    }
+
+    public void StopMainTheme()
+    {
+        mainAudioSource.Stop();
     }
 
     public void PlayVoiceAlien1()
@@ -43,5 +62,10 @@ public class SoundManager : BaseManager
 
         audioSourceVoxAlien1.clip = voxAlien1[idx];
         audioSourceVoxAlien1.Play();
+    }
+
+    public void PlayAgentImmoReaction() {
+        audioSourceAgentImmo.clip = agentImmoReaction;
+        audioSourceAgentImmo.Play();
     }
 }

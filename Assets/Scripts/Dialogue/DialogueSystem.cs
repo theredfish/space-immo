@@ -74,8 +74,10 @@ public class DialogueSystem : MonoBehaviour
 
     public void MakeChoice(int idx)
     {
+        //soundManager.PlayAgentImmoReaction();
         _inkStory.ChooseChoiceIndex(idx);
         DisableChoices();
+        
         StartDialogue();
     }
 
@@ -102,7 +104,8 @@ public class DialogueSystem : MonoBehaviour
 
         _inkStory.BindExternalFunction("gameOver", () =>
         {
-            // gameManager.LoadQuestLevel1();
+            gameSceneManager.LoadMainMenu();
+            Debug.Log("back to Menu");
 
         });
     }

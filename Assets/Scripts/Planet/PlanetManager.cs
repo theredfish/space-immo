@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlanetManager : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class PlanetManager : MonoBehaviour
     bool isTreesCompleted;
 
     bool isCompleted;
+
+    GameManager gameManager;
+
+    public GameObject BackToMainMenuBoutton; 
+    void Awake() {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
     void Start()
     {
         isCompleted = false;
@@ -90,6 +98,10 @@ public class PlanetManager : MonoBehaviour
         {
             isCompleted = true;
             Debug.Log("PLANET COMPLETED !!!!");
+            GameObject findTimeLeft = GameObject.FindGameObjectWithTag("TimeLeft");
+            Text labelTimeLeft = findTimeLeft.GetComponent<Text>();
+            gameManager.Win(labelTimeLeft);
+            BackToMainMenuBoutton.SetActive(true);
         }
     }
 }
